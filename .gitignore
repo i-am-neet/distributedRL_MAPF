@@ -89,3 +89,13 @@ auto/
 ###################
 __pycache__/
 results/
+
+# configs
+saved_environments/
+saved_environments_mini/
+model_primal
+primal_results/
+primal_results_mini/
+train_primal/
+.ipynb_checkpoints/
+

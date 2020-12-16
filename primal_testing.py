@@ -7,8 +7,8 @@ import mapf_gym_cap as mapf_gym
 import time
 from od_mstar3.col_set_addition import OutOfTimeError,NoSolutionError
 
-results_path="primal_results"
-environment_path="saved_environments"
+results_path="primal_results_mini"
+environment_path="saved_environments_mini"
 if not os.path.exists(results_path):
     os.makedirs(results_path)
 
@@ -112,7 +112,7 @@ def run_simulations(next,primal):
     results=dict()
     start_time=time.time()
     try:
-        #print('Starting test ({},{},{},{})'.format(n,s,d,id))
+        print('Starting test ({},{},{},{})'.format(n,s,d,id))
         path=primal.find_path(256 + 128*int(s>=80) + 128*int(s>=160))
         results['finished']=True
         results['time']=time.time()-start_time
@@ -133,7 +133,8 @@ if __name__ == "__main__":
     primal=PRIMAL('model_primal',10)
     num_agents = 2
 
-    while num_agents < 1024:
+#    while num_agents < 1024:
+    while num_agents < 8:
         num_agents *= 2
 
         print("Starting tests for %d agents" % num_agents)
