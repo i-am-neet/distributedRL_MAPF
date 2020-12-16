@@ -98,4 +98,5 @@ primal_results/
 primal_results_mini/
 train_primal/
 .ipynb_checkpoints/
+core
 
